@@ -4,7 +4,22 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="¿Sabés en qué gastás tu plata? Gastos te lo dice en segundos. Gratis, sin cuenta, sin suscripción." />
+<meta name="theme-color" content="#000000" />
 <title>Gastos — Controlá tus finanzas</title>
+<link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
+<link rel="icon" type="image/png" href="icons/icon-192.png" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+
+<!-- Social share / link preview -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Gastos — Controlá tus finanzas" />
+<meta property="og:description" content="¿Sabés en qué gastás tu plata? Registrá gastos e ingresos en segundos. Gratis, sin cuenta, sin suscripción." />
+<meta property="og:image" content="icons/icon-512.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Gastos — Controlá tus finanzas" />
+<meta name="twitter:description" content="Registrá gastos e ingresos en segundos. Gratis, sin cuenta, sin suscripción." />
+<meta name="twitter:image" content="icons/icon-512.png" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
@@ -32,7 +47,7 @@
     background:rgba(0,0,0,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
     border-bottom:1px solid var(--outline-soft);}
   .logo{display:flex;align-items:center;gap:10px;color:var(--on-surface);font-weight:700;font-size:18px;}
-  .logo-icon{width:34px;height:34px;border-radius:10px;background:var(--hero-grad);display:grid;place-items:center;font-weight:800;font-size:16px;color:#fff;flex-shrink:0;}
+  .logo-icon{width:34px;height:34px;border-radius:10px;flex-shrink:0;display:block;}
   .btn-nav{background:var(--primary);color:#fff;font-size:13.5px;font-weight:700;padding:9px 20px;border-radius:var(--r-full);transition:opacity .15s;}
   .btn-nav:hover{opacity:.85;}
 
@@ -49,6 +64,8 @@
   /* HERO */
   .hero{padding:148px 24px 80px;text-align:center;position:relative;overflow:hidden;}
   .hero::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:800px;height:560px;background:radial-gradient(ellipse,rgba(129,140,248,.16) 0%,transparent 68%);pointer-events:none;}
+  .hero-icon{width:84px;height:84px;border-radius:21px;margin:0 auto 26px;display:block;box-shadow:0 18px 48px -10px rgba(129,140,248,.55);animation:floaty 4s ease-in-out infinite;}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
   .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(129,140,248,.1);border:1px solid rgba(129,140,248,.22);color:var(--primary-bright);font-size:12px;font-weight:700;padding:6px 14px;border-radius:var(--r-full);margin-bottom:28px;letter-spacing:.05em;text-transform:uppercase;}
   .hero h1{font-size:clamp(2.4rem,8vw,4.4rem);font-weight:800;line-height:1.06;letter-spacing:-.04em;margin-bottom:22px;}
   .hero h1 .grad{background:var(--hero-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
@@ -152,7 +169,7 @@
   footer{border-top:1px solid var(--outline-soft);padding:32px 24px;}
   .footer-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
   .footer-left{display:flex;align-items:center;gap:10px;}
-  .footer-logo-icon{width:28px;height:28px;border-radius:8px;background:var(--hero-grad);display:grid;place-items:center;font-weight:800;font-size:13px;color:#fff;flex-shrink:0;}
+  .footer-logo-icon{width:28px;height:28px;border-radius:8px;flex-shrink:0;display:block;}
   footer p{font-size:13px;color:var(--on-surface-variant);}
   footer a{color:var(--primary);font-weight:600;}
   footer a:hover{text-decoration:underline;}
@@ -169,7 +186,7 @@
 
 <nav>
   <a class="logo" href="#">
-    <div class="logo-icon">G</div>
+    <img class="logo-icon" src="icons/icon.svg" alt="Gastos" width="34" height="34" />
     Gastos
   </a>
   <a class="btn-nav" href="https://gastoscolo.vercel.app">Abrir app →</a>
@@ -178,6 +195,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container">
+    <img class="hero-icon" src="icons/icon.svg" alt="Gastos" width="84" height="84" />
     <div class="badge">✦ Gratis · Sin cuenta · Sin suscripción</div>
     <h1>¿Sabés en qué<br /><span class="grad">gastás tu plata?</span></h1>
     <p class="hero-lead">La mayoría no sabe. <strong style="color:var(--on-surface)">Gastos</strong> te lo muestra en segundos: sin registrarte, sin pagar nada, sin que nadie vea tus finanzas.</p>
@@ -398,7 +416,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-left">
-      <div class="footer-logo-icon">G</div>
+      <img class="footer-logo-icon" src="icons/icon.svg" alt="Gastos" width="28" height="28" />
       <p>Gastos — control financiero personal</p>
     </div>
     <p>Gratis · Sin cuenta · <a href="https://gastoscolo.vercel.app">Abrir app</a></p>
