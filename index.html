@@ -76,6 +76,12 @@
   .sec-title{font-size:clamp(1.9rem,4.6vw,2.9rem);font-weight:900;letter-spacing:-.035em;line-height:1.08;margin-bottom:14px;}
   .sec-sub{font-size:15.5px;color:var(--on-surface-variant);line-height:1.7;max-width:580px;}
 
+  /* secciones centradas */
+  .center-sec .container{text-align:center;}
+  .center-sec .sec-sub{margin-left:auto;margin-right:auto;}
+  .center-sec .steps{margin-left:auto;margin-right:auto;text-align:left;}
+  .center-sec .cur-chips{justify-content:center;}
+
   /* reveal on scroll */
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);}
   .reveal.in{opacity:1;transform:none;}
@@ -380,7 +386,7 @@
 </section>
 
 <!-- HOW -->
-<section class="block">
+<section class="block center-sec">
   <div class="container reveal">
     <div class="how-hd">
       <span class="sec-tag">Cómo empezar</span>
@@ -414,7 +420,7 @@
 </section>
 
 <!-- CURRENCIES -->
-<section class="block">
+<section class="block center-sec">
   <div class="container reveal">
     <span class="sec-tag">Multi-divisa</span>
     <h2 class="sec-title">Registrá en la moneda<br />que estés usando.</h2>
