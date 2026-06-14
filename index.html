@@ -141,7 +141,9 @@
   .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
   .feat{position:relative;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-xl);padding:26px;display:flex;flex-direction:column;gap:11px;transition:transform .2s,border-color .2s,background .2s,box-shadow .2s;overflow:hidden;}
   .feat:hover{transform:translateY(-5px);border-color:rgba(129,140,248,.45);background:rgba(129,140,248,.06);box-shadow:0 18px 50px -20px rgba(129,140,248,.4);}
-  .feat-icon{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:26px;background:rgba(129,140,248,.12);border:1px solid rgba(129,140,248,.2);}
+  .feat-icon{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:rgba(129,140,248,.12);border:1px solid rgba(129,140,248,.2);color:var(--primary-bright);transition:color .2s,background .2s,border-color .2s;}
+  .feat:hover .feat-icon{color:#fff;background:rgba(129,140,248,.2);border-color:rgba(129,140,248,.5);}
+  .feat-icon svg{width:26px;height:26px;display:block;}
   .feat h4{font-size:15.5px;font-weight:800;letter-spacing:-.01em;}
   .feat p{font-size:13.5px;color:var(--on-surface-variant);line-height:1.65;}
 
@@ -330,14 +332,14 @@
       <p class="sec-sub">Cada función existe porque resuelve algo real, no para llenar una lista de features.</p>
     </div>
     <div class="features-grid">
-      <div class="feat"><div class="feat-icon">📊</div><h4>Balance instantáneo</h4><p>Al abrir la app ya ves cuánto gastaste, cuánto ingresaste y qué te queda. Sin buscar nada.</p></div>
-      <div class="feat"><div class="feat-icon">↔️</div><h4>Swipe para borrar o duplicar</h4><p>Deslizá un movimiento: derecha para duplicarlo, izquierda para borrarlo. Sin confirmaciones innecesarias.</p></div>
-      <div class="feat"><div class="feat-icon">💱</div><h4>Conversor de monedas</h4><p>Convertí entre 7 divisas con las tasas que vos actualizás. Útil si manejás plata en distintas monedas.</p></div>
-      <div class="feat"><div class="feat-icon">🗂️</div><h4>Categorías a tu medida</h4><p>Las predeterminadas cubren el 90% de los casos. Si necesitás más, las creás vos en dos toques.</p></div>
-      <div class="feat"><div class="feat-icon">🔁</div><h4>Recurrentes en un tap</h4><p>Guardá el alquiler, la suscripción del gym, lo que sea fijo. La próxima vez se completa con un toque.</p></div>
-      <div class="feat"><div class="feat-icon">💾</div><h4>Exportá cuando quieras</h4><p>CSV para analizar en Excel, o backup completo para restaurar en otro dispositivo.</p></div>
-      <div class="feat"><div class="feat-icon">🌙</div><h4>Modo oscuro y claro</h4><p>Cambiá desde ajustes. El diseño está cuidado en ambos modos, no es un afterthought.</p></div>
-      <div class="feat"><div class="feat-icon">🎯</div><h4>Meta de ahorro</h4><p>Ponete un objetivo mensual y Inicio te muestra una barra de progreso. Simple y motivador.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><rect x="6" y="11" width="3" height="7" rx="1"/><rect x="10.5" y="7" width="3" height="11" rx="1"/><rect x="15" y="13" width="3" height="5" rx="1"/></svg></div><h4>Balance instantáneo</h4><p>Al abrir la app ya ves cuánto gastaste, cuánto ingresaste y qué te queda. Sin buscar nada.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8.5" y="5.5" width="7" height="13" rx="1.8"/><path d="M5.5 9l-2 3 2 3"/><path d="M18.5 9l2 3-2 3"/></svg></div><h4>Swipe para borrar o duplicar</h4><p>Deslizá un movimiento: derecha para duplicarlo, izquierda para borrarlo. Sin confirmaciones innecesarias.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13"/><path d="M14 6l3 3-3 3"/><path d="M20 15H7"/><path d="M10 12l-3 3 3 3"/></svg></div><h4>Conversor de monedas</h4><p>Convertí entre 7 divisas con las tasas que vos actualizás. Útil si manejás plata en distintas monedas.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg></div><h4>Categorías a tu medida</h4><p>Las predeterminadas cubren el 90% de los casos. Si necesitás más, las creás vos en dos toques.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div><h4>Recurrentes en un tap</h4><p>Guardá el alquiler, la suscripción del gym, lo que sea fijo. La próxima vez se completa con un toque.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10"/><path d="M8 9.5l4 4 4-4"/><path d="M5 16v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2"/></svg></div><h4>Exportá cuando quieras</h4><p>CSV para analizar en Excel, o backup completo para restaurar en otro dispositivo.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor" stroke="none"/></svg></div><h4>Modo oscuro y claro</h4><p>Cambiá desde ajustes. El diseño está cuidado en ambos modos, no es un afterthought.</p></div>
+      <div class="feat"><div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.3"/><circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/></svg></div><h4>Meta de ahorro</h4><p>Ponete un objetivo mensual y Inicio te muestra una barra de progreso. Simple y motivador.</p></div>
     </div>
   </div>
 </section>
