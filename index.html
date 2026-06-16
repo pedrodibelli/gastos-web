@@ -112,6 +112,12 @@
   @keyframes pulse{0%,100%{opacity:.32}50%{opacity:.55}}
   .phone{position:relative;z-index:1;width:100%;aspect-ratio:1179/2556;background:#0a0a0c;border:2px solid rgba(255,255,255,.14);border-radius:40px;overflow:hidden;box-shadow:0 50px 100px -24px rgba(0,0,0,.9);transition:transform .25s ease-out;transform-style:preserve-3d;}
   .phone-shot{width:100%;height:100%;object-fit:cover;display:block;}
+  .trio{position:relative;display:flex;justify-content:center;align-items:flex-end;gap:16px;margin:64px auto 0;max-width:820px;}
+  .trio-glow{position:absolute;inset:-20px 0 36px;border-radius:60px;background:var(--grad);filter:blur(60px);opacity:.32;z-index:0;animation:pulse 5s ease-in-out infinite;}
+  .trio .phone{width:30%;max-width:240px;border-radius:34px;transition:transform .35s cubic-bezier(.22,.61,.36,1);}
+  .trio .phone.center{width:33%;max-width:266px;z-index:2;border-radius:38px;}
+  .trio .phone.side{opacity:.94;}
+  .trio .phone:hover{transform:translateY(-10px) scale(1.04);z-index:3;}
 
   /* ===== SECTION SHELL ===== */
   section.block{padding:88px 24px;position:relative;}
@@ -224,6 +230,9 @@
     .install-card{padding:38px 22px;}
     .cta-final{padding:80px 20px;}
     .mockup-wrap{max-width:220px;}
+    .trio{gap:8px;max-width:none;margin-top:48px;}
+    .trio .phone{border-radius:22px;}
+    .trio .phone.center{border-radius:24px;}
     .stat{flex:1 1 140px;}
   }
   @media(prefers-reduced-motion:reduce){
@@ -267,12 +276,12 @@
       <div class="stat"><div class="stat-num"><span data-count="0">0</span></div><div class="stat-lbl">datos en la nube</div></div>
     </div>
 
-    <!-- PHONE -->
-    <div class="mockup-wrap" id="mockup">
-      <div class="mockup-glow"></div>
-      <div class="phone" id="phone">
-        <img class="phone-shot" src="app-home.png" alt="Pantalla de inicio de la app Gastos" />
-      </div>
+    <!-- PHONES -->
+    <div class="trio">
+      <div class="trio-glow"></div>
+      <div class="phone side"><img class="phone-shot" src="cap-historial.png" alt="Historial de movimientos en Gastos" loading="lazy" /></div>
+      <div class="phone center"><img class="phone-shot" src="app-home.png" alt="Pantalla de inicio de la app Gastos" /></div>
+      <div class="phone side"><img class="phone-shot" src="cap-conversor.png" alt="Conversor de monedas en Gastos" loading="lazy" /></div>
     </div>
   </div>
 </section>
